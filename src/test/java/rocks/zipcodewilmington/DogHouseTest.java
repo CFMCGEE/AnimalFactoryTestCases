@@ -36,6 +36,8 @@ public class DogHouseTest {
     @Test
     public void testAdd() {
 
+        Dog dog = new Dog("Doggy", new Date(), 31);
+
         DogHouse.add(dog);
 
         Assert.assertEquals(dog, dog);
@@ -45,6 +47,8 @@ public class DogHouseTest {
     // TODO - Create tests for `void remove(Integer id)`
     @Test
     public void testRemoveId() {
+
+        Dog dog = new Dog("Doggy", new Date(), 31);
 
         int expected = 31;
 
@@ -76,6 +80,8 @@ public class DogHouseTest {
     @Test
     public void testGetCatById() {
 
+        Dog dog = new Dog("Doggy", new Date(), 31);
+
         DogHouse.getDogById(31);
 
         Dog expected = dog;
@@ -86,21 +92,4 @@ public class DogHouseTest {
 
     }
 
-    // TODO - Create tests for `Integer getNumberOfDogs()`
-    @Test
-    public void testGetNumberOfCats() {
-
-        Dog doggy = new Dog("Doggy", new Date(), 31);
-
-        DogHouse.add(doggy);
-
-        DogHouse.getNumberOfDogs();
-
-        int expected = 1;
-
-        int actual = DogHouse.getNumberOfDogs();
-
-        Assert.assertEquals(expected, actual);
-
-    }
 }

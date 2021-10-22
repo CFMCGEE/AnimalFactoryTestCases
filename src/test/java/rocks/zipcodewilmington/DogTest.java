@@ -16,7 +16,6 @@ import java.util.Date;
  */
 public class DogTest {
 
-    Dog dog = new Dog("Doggy", new Date(), 31);
 
     @Test
     public void setNameTest() {
@@ -50,6 +49,8 @@ public class DogTest {
     @Test
     public void testSpeak() {
 
+        Dog dog = new Dog("Doggy", new Date(), 31);
+
         String expected = "bark!";
 
         String actual = dog.speak();
@@ -82,17 +83,25 @@ public class DogTest {
     @Test
     public void testEat() {
 
-        Food food = new Food();
+        Dog dog = new Dog("Doggy", new Date(), 31);
 
-        dog.eat(food);
+        Food dogFood = new Food();
 
-        Assert.assertEquals(food, food);
+        dog.eat(dogFood);
+
+        int expected = 1;
+
+        int actual = dog.getNumberOfMealsEaten();
+
+        Assert.assertEquals(expected, actual);
 
     }
 
     // TODO - Create tests for `Integer getId()`
     @Test
     public void testGetId() {
+
+        Dog dog = new Dog("Doggy", new Date(), 31);
 
         int expected = 31;
 
@@ -106,12 +115,16 @@ public class DogTest {
     @Test
     public void testAnimalinheritance() {
 
+        Dog dog = new Dog("Doggy", new Date(), 31);
+
         Assert.assertTrue(dog instanceof Animal);
 
     }
 
     // TODO - Create test to check Mammal inheritance; google search `java instanceof keyword`
     public void testMammalinheritance() {
+
+        Dog dog = new Dog("Doggy", new Date(), 31);
 
         Assert.assertTrue(dog instanceof Mammal);
 

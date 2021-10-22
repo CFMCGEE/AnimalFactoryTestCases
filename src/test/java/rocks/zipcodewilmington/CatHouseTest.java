@@ -12,11 +12,11 @@ import java.util.Date;
  */
 public class CatHouseTest {
 
-    Cat cat = new Cat("Kitty", new Date(), 30);
-
     // TODO - Create tests for `void add(Cat cat)`
     @Test
     public void testAdd() {
+
+        Cat cat = new Cat("Kitty", new Date(), 30);
 
         CatHouse.add(cat);
 
@@ -27,6 +27,8 @@ public class CatHouseTest {
     // TODO - Create tests for `void remove(Integer id)`
     @Test
     public void testRemoveId() {
+
+        Cat cat = new Cat("Kitty", new Date(), 30);
 
         int expected = 30;
 
@@ -57,6 +59,7 @@ public class CatHouseTest {
     // TODO - Create tests for `Cat getCatById(Integer id)`
     @Test
     public void testGetCatById() {
+        Cat cat = new Cat("Kitty", new Date(), 30);
 
         CatHouse.getCatById(30);
 

@@ -14,11 +14,11 @@ import java.util.Date;
  */
 public class CatTest {
 
-    Cat cat = new Cat("Kitty", new Date(), 30);
-
     // TODO - Create tests for `void setName(String name)`
     @Test
     public void testSetName() {
+
+        Cat cat = new Cat("Kitty", new Date(), 30);
 
         cat.setName("Typical kitten name");
 
@@ -33,6 +33,8 @@ public class CatTest {
     // TODO - Create tests for `speak`
     @Test
     public void testSpeak() {
+
+        Cat cat = new Cat("Kitty", new Date(), 30);
 
         String expected = "meow!";
 
@@ -66,17 +68,25 @@ public class CatTest {
     @Test
     public void testEat() {
 
-        Food food = new Food();
+        Cat cat = new Cat("Kitty", new Date(), 30);
 
-        cat.eat(food);
+        Food catFood = new Food();
 
-        Assert.assertEquals(food, food);
+        cat.eat(catFood);
+
+        int expected = 1;
+
+        int actual = cat.getNumberOfMealsEaten();
+
+        Assert.assertEquals(expected, actual);
 
     }
 
     // TODO - Create tests for `Integer getId()`
     @Test
     public void testGetId() {
+
+        Cat cat = new Cat("Kitty", new Date(), 30);
 
         int expected = 30;
 
@@ -90,12 +100,16 @@ public class CatTest {
     @Test
     public void testAnimalinheritance() {
 
+        Cat cat = new Cat("Kitty", new Date(), 30);
+
         Assert.assertTrue(cat instanceof Animal);
 
     }
 
     // TODO - Create test to check Mammal inheritance; google search `java instanceof keyword`
     public void testMammalinheritance() {
+
+        Cat cat = new Cat("Kitty", new Date(), 30);
 
         Assert.assertTrue(cat instanceof Mammal);
 
